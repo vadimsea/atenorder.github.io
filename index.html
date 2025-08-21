@@ -212,7 +212,7 @@
             width: 100%;
         }
         
-        /* Hero Section */
+        /* Hero Section - ИСПРАВЛЕНА СЕКЦИЯ */
         .hero {
             height: 100vh;
             background: linear-gradient(135deg, 
@@ -255,6 +255,7 @@
             position: relative;
             z-index: 2;
             animation: fadeInUp 1.5s ease-out;
+            width: 100%;
         }
 
         @keyframes fadeInUp {
@@ -287,19 +288,26 @@
             100% { text-shadow: 3px 3px 6px var(--shadow), 0 0 40px rgba(212, 175, 55, 0.6); }
         }
         
-        .hero-content p {
-            font-size: 1.8rem;
+        .motto-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
             margin-bottom: 2.5rem;
-            max-width: 600px;
+        }
+        
+        .hero-motto {
+            font-size: 1.8rem;
             font-family: 'Roboto', sans-serif;
             font-weight: 600;
             text-shadow: 2px 2px 4px var(--shadow);
             letter-spacing: 2px;
-            color: var(--lapis-light); /* Изменен цвет для лучшей читаемости */
+            color: var(--lapis-light);
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
+            width: auto;
         }
         
         .cta-button {
@@ -552,7 +560,7 @@
                 font-size: 2.8rem;
             }
             
-            .hero-content p {
+            .hero-motto {
                 font-size: 1.4rem;
                 flex-direction: column;
             }
@@ -583,7 +591,7 @@
                 letter-spacing: 2px;
             }
 
-            .hero-content p {
+            .hero-motto {
                 font-size: 1.2rem;
             }
             
@@ -633,7 +641,9 @@
         <div class="container hero-content">
             <div>
                 <h1>ВЕЧНЫЙ ОРДЕН АТОНА</h1>
-                <p>Свет <span class="ornament"></span> Истина <span class="ornament"></span> Жизнь</p>
+                <div class="motto-container">
+                    <p class="hero-motto">Свет <span class="ornament"></span> Истина <span class="ornament"></span> Жизнь</p>
+                </div>
                 <a href="#contact" class="cta-button">Путь к Горизонту</a>
             </div>
         </div>
